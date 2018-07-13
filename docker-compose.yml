@@ -9,3 +9,6 @@ services:
     environment:
       GITHUB_USER: "${GITHUB_USER}"
       GITHUB_TOKEN: "${GITHUB_TOKEN}"
+    labels:
+      kompose.service.type: LoadBalancer
+    image: gcr.io/boos-demo-projects-are-rad/mention-bot
