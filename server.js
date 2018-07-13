@@ -18,7 +18,7 @@ var messageGenerator = require('./message.js');
 var util = require('util');
 var schedule = require('./schedule.js');
 
-var GitHubApi = require('github');
+var GitHubApi = require('@octokit/rest');
 var jsonlint = require('jsonlint');
 
 var CONFIG_PATH = '.mention-bot';

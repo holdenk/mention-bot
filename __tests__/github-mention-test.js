@@ -16,7 +16,7 @@ jest
 require.requireActual('babel-polyfill');
 var mentionBot = require('../mention-bot.js');
 var fs = require('fs');
-const GitHubApi = require('github');
+const GitHubApi = require('@octokit/rest');
 
 describe('Github Mention', function() {
   const github = new GitHubApi();

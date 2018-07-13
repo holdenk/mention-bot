@@ -574,6 +574,9 @@ async function guessOwnersForPullRequest(
   config: Object,
   github: Object
 ): Promise<Array<string>> {
+  if (github == null) {
+    throw "Github is null"
+  }
   const ownerAndRepo = repoURL.split('/').slice(-2);
   const cacheKey = `${repoURL}-pull-${id}.diff`.replace(/[^a-zA-Z0-9-_\.]/g, '-');
   const diff = await cacheGet(
