@@ -120,7 +120,7 @@ async function work(body) {
   var data = {};
   try {
     data = JSON.parse(body.toString());
-    console.log(data.pull_request.html_url);
+    console.log(data.pull_request);
   } catch (e) {
     console.error(e);
   }
@@ -135,7 +135,7 @@ async function work(body) {
     fileBlacklist: [],
     requiredOrgs: [],
     findPotentialReviewers: true,
-    actions: ['opened'],
+    actions: ['opened', 'undefined'],
     branches:[],
     skipAlreadyAssignedPR: false,
     skipAlreadyMentionedPR: false,
@@ -282,6 +282,8 @@ async function work(body) {
   if (data.organization) {
     org = data.organization.login;
   }
+
+  console.log("Called with data:", data)
 
   var reviewers = await mentionBot.guessOwnersForPullRequest(
     data.repository.html_url, // 'https://github.com/fbsamples/bot-testing'

@@ -28,5 +28,10 @@ module.exports = function(
   //
   //   @hunkim, thanks! @georgecodes and @vjeux, please review this.
 
-	return defaultMessageGenerator(reviewers, pullRequester);
+    //	return defaultMessageGenerator(reviewers, pullRequester);
+
+    return pullRequester +
+	', thanks! I am a bot who has found some folks who might be able to help with the review:'
+	+ mentionSentenceBuilder(reviewers);
+
 };
