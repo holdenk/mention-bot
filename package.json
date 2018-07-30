@@ -2,14 +2,14 @@
   "name": "mention-bot",
   "version": "3.0.2",
   "license": "BSD-3-Clause",
-  "repository": "facebook/mention-bot",
+  "repository": "holdenk/mention-bot",
   "scripts": {
     "test": "flow && jest",
     "start": "node run-server.js"
   },
   "main": "./run-mention-bot.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
@@ -34,6 +34,7 @@
     "jest-cli": "^0.7.1",
     "jsonlint": "^1.6.2",
     "minimatch": "^3.0.0",
-    "node-schedule": "^1.0.0"
+    "node-schedule": "^1.0.0",
+    "pit": "^0.1.1"
   }
 }

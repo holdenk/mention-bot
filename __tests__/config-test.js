@@ -12,25 +12,6 @@ describe('config uses defaults from package.json', function() {
       protocol: 'https'
     });
   }
-  it('can be customized for github enterprise in package.json', function() {
-    jest.setMock('../config.json', {});
-    jest.setMock('../package.json', {
-      config: {
-        gheHost: 'foo.github.com',
-        ghePort: 80,
-        gheProtocol: 'http',
-        ghePathPrefix: 'api/v3'
-      }
-    });
-    var config = require('../config.js');
-    expect(config.github).toEqual({
-      host: 'foo.github.com',
-      apiHost: 'foo.github.com',
-      port: 80,
-      pathPrefix: 'api/v3',
-      protocol: 'http'
-    });
-  });
 });
 
 describe('config.json can override defaults', function() {
