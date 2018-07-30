@@ -129,7 +129,8 @@ async function work(body) {
   var repoConfig = {
     maxReviewers: 3,
     numFilesToCheck: 5,
-    userBlacklist: [],
+    // Quick hack for now while we test this out in beam, blacklist of lapsed contributors. TODO(holden): add support for checking users last contrib and filtering based on this.
+    userBlacklist: ['gdubya','danayakapura','cpovirk','chinmaykolhatkar','cherba','bimargulies-google','austern','andreich','andreimaksimenka','Xrampino','vladisav','tom-haines','shlee0605','seano314','crcsmnky','rculbertson','yonromai','mrtns','gamolina','lbowman','kevinsookocheff-wf','kwestbrooks','keijiyoshida','joshfg','JianfengQian','r7raul1984','jeremydw','finiterank','JasonMWhite','jghoman','jean-philippe-martin','igorbernstein2','GergelyNovak','dgouyette','ericmand','perezd','dlebech','dralves','danielnorberg','cph6','cschneider','chrish42','broady','bchen-talend','baibaichen','anilmuppalla','rfevang','prabeesh','mbuccini','kgraney','tim1357','tedyu','stevewheeler','smarthi','mdshalda','mariusz89016','kluever','stefanobaghino','N3da','radhika-kulkarni','bpgergo','rtshadow','mizitch','mshytikov','hildrum','joshualitt','jeffkpayne','elek','craigcitro','nagachika','amarouni','fyellin','lucasallan','mrunesson','PramodSSImmaneni','seshadri-cr','StephanEwen','ubunatic','cushon','dennishuo','tucosh','mbalassi','mwegiel','andrewsmartin','devin-donnelly','sungjunyoung','sbilac','drieber','colinre','aman-ebay','meunierd','mabdullah353','sandihouse','kl0u','peay','andersgoog','earhart','zhanyongwan','wikier','xhumanoid','yk5','bo-yuan','azurezyq','srowen','tibkiss','laschmidt','ivant','slavachernyak','amygdala','eljefe6a','malo-denielou','jwills','ianzhou1','hadarhg','matthewlang','evilsoapbox','gildea','silviulica','francesperry','tomwhite','amitsela','davorbonaci','dhalperi'],
     userBlacklistForPR: [],
     userWhitelist: [],
     fileBlacklist: [],
